@@ -1,6 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/get_instance.dart';
 import 'package:quicklens/src/core/widgets/custom_buttom_widget.dart';
+import 'package:quicklens/src/feature/auth/controller/auth_crl.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -11,7 +13,7 @@ class HomeView extends StatelessWidget {
       body: Center(
         child: CustomButtomWidget(
           onPressed: () {
-            FirebaseAuth.instance.signOut();
+         Get.find<AuthCrl>().signOut();
           },
           text: "Sign Out",
         ),

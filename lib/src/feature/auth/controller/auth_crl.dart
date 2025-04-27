@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:quicklens/src/core/config/app_strings.dart';
 import 'package:quicklens/src/core/utils/my_aleart_dialog.dart';
 import 'package:quicklens/src/feature/auth/model/user_model.dart';
+import 'package:quicklens/src/feature/auth/view/sign_in/view/sign_in_view.dart';
 import 'package:quicklens/src/feature/business_details/view/business_details_screen.dart';
 import 'package:quicklens/src/feature/home/home_view.dart';
 
@@ -190,6 +191,15 @@ class AuthCrl extends GetxController {
       } else {
         log(e.toString());
       }
+    }
+  }
+  Future<void> signOut() async {
+    try {
+      await FirebaseAuth.instance.signOut();
+      clearData(); // تمسح بيانات المستخدم
+      Get.offAll(() => const SignInView()); // يرجع على صفحة تسجيل الدخول
+    } catch (e) {
+      print('Error signing out: $e');
     }
   }
 }
