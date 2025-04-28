@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
       ,),
         AnimatedSplashScreen(
           splash: Image.asset("assets/images/quickgif.gif"),
-          nextScreen: const ItemGridScreen(),
+          nextScreen: const AppQuicklens (),
           duration: 3000,
           splashTransition: SplashTransition.fadeTransition,
           backgroundColor: Colors.transparent,),
