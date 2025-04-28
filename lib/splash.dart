@@ -1,6 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_corse/screens/item_grid_screen.dart';
+import 'package:quicklenc/item_grid_screen.dart';
 
 
 class SplashScreen extends StatelessWidget {
