@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
       Positioned.fill(child: Image.asset(
         "assets/images/splashscreen.png",
         fit: BoxFit.cover,),),
-      ,),
+    
         AnimatedSplashScreen(
           splash: Image.asset("assets/images/quickgif.gif"),
           nextScreen: const AppQuicklens (),
