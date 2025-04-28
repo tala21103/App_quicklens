@@ -10,10 +10,9 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
     children: [
-      // Positioned.fill(child: Image.asset(
-      //   "assets/images/splashscreen.png",
-      //   fit: BoxFit.cover,),),
-      const Positioned.fill(child: Scaffold()
+      Positioned.fill(child: Image.asset(
+        "assets/images/splashscreen.png",
+        fit: BoxFit.cover,),),
       ,),
         AnimatedSplashScreen(
           splash: Image.asset("assets/images/quickgif.gif"),
